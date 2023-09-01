@@ -2,16 +2,17 @@
     <img src = "./assets/kopanda.png">
 </p>
 
+<br>
 
-**한국어 말하기 능력 시험(TOPIK 말하기 시험) AI 학습 도우미**
+## 한국어 말하기 능력 시험(TOPIK 말하기 시험) AI 학습 도우미
 
----
 
 <a href="https://youtu.be/ggfLHrbUwkQ?si=VdCOg34h7Dpce0Py" style="color: green; font-weight: bold">KoPanda 시연 영상</a>
 
 <a href='./assets/KoPanda_발표자료.pdf' style="color: green; font-weight: bold">KoPanda 발표 자료</a>
 
----
+<br>
+
 
 ## KoPanda 구성
 
