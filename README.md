@@ -17,6 +17,6 @@ https://serulean.github.io/KoPanda/
 
 - 회원가입 및 로그인 없이 이용 가능합니다.
 
-- 소개 편의를 위해 미리 녹음된 음성 및 예시 문장과 결과를 사용하였습니다.
+- 소개 편의를 위해 미리 녹음된 음성 및 예시 문장과 결과를 사용하였습니다. (프로젝트 당시에는 Flask를 이용해 백엔드를 구현했습니다.)
 
 - 프로젝트에 대한 자세한 내용은 `main` 브랜치의 <a href='https://github.com/serulean/KoPanda'>README</a> 및 <a href='./assets/KoPanda_발표자료.pdf'>발표 자료</a>를 참고해 주세요.
