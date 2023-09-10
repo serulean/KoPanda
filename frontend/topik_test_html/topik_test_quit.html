@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KoPanda 말하기 모의고사 - 그만두기</title>
+    <link rel="shortcut icon" href="images/fevicon.ico" />
+    
+    <!-- CSS FILES -->   
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="../css/kopanda-site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        .test, .answer_wait, .mic_ans {
+            display: none;
+        }
+        #topik-notice {
+            background-image: url(../images/topik_test_intro.png);
+        }
+        #topik-test {
+            background-image: url(../images/topik_test.png);
+        }
+    </style>
+</head>
+
+<body id="topik-quit">
+
+    <main>
+
+        <section class="test-notice-section text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-12 my-auto mt-4 mb-4">
+                        <h1 class="test-stop-title">시험을 그만두시겠습니까?</h1>
+                    </div>
+
+                    <div class="test-notice-body col-12 my-auto mt-4 mb-5">
+                        <h2 class="test-stop-mainline mx-auto">
+                            지금까지의 과정은 저장되지 않으며, 언제든지 재응시 가능합니다.<br>
+                            다만 재응시는 정확한 실력 측정에 부정적인 영향을 미칠 수 있습니다.
+                        </h2>
+                    </div>
+
+                    <div class="col-2 mt-4">
+                        <a href = "../topik_test_list.html">
+                            <button class="test-notice-stop-btn btn">
+                                <span>그만두기</span>
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="col-2 mt-4">
+                        <button class="test-notice-start-btn btn" onclick="history.go(-1)">
+                            <span>이어보기</span>
+                        </button>
+                    </div>
+
+                </div>
+                
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+</html>

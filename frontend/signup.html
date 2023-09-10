@@ -1,0 +1,294 @@
+<!--
+TemplateMo 581 Kind Heart Charity
+https://templatemo.com/tm-581-kind-heart-charity
+-->
+
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>KoPanda - 회원가입</title>
+        <link rel="shortcut icon" href="images/fevicon.ico" />
+
+        <!-- CSS FILES -->   
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/kopanda-site.css" />
+    </head>
+    
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow">
+            <div class="container">
+                <a class="navbar-brand" href="/main_page.html">
+                    <img src="images/logo_word.png" class="logo img-fluid" alt="KoPanda">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="one-menu" href="/topik_introduce.html">TOPIK 말하기란</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="one-menu" href="/kopanda_price.html">KoPanda 요금제</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="one-menu" href="/topik_test_list.html">응시하기</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="one-menu" href="/mypage.html" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">나의 TOPIK</a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/mypage.html">나의 TOPIK</a></li>
+                                <li><a class="dropdown-item" href="/topik_gradecard_list.html">나의 성적표</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+
+            <section class="donate-section">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-12 mx-auto">
+                            <form name="signup_form" class="custom-form signup-form" action="http://kopanda.iptime.org/" method="POST" role="form">
+                                
+                                <h3 class="mt-4 mb-5">회원가입</h3>
+
+                                <div class="row justify-content-center">
+
+                                    <div class="col-10 mt-4">
+                                        <h5 class="mt-1 mb-3">아이디</h5>
+                                        <input type="text" id="user_id" name="user_id" class="form-control" placeholder="이메일 주소를 입력해 주세요.">
+                                    </div>
+
+                                    <div class="col-10 mt-4">
+                                        <h5 class="mt-1 mb-3">비밀번호</h5>
+                                        <input type="password" id="user_pwd" name="user_pwd" class="form-control" placeholder="8자리 이상">
+                                    </div>
+
+                                    <div class="col-10 mt-4">
+                                        <h5 class="mt-1 mb-3">비밀번호 확인</h5>
+                                        <input type="password" id="user_repwd" name="user_repwd" class="form-control" placeholder="8자리 이상">
+                                    </div>
+
+                                    <div class="col-10 mt-4">
+                                        <h5 class="mt-1 mb-3">닉네임</h5>
+                                        <input type="text" id="user_nickname" name="user_nickname" class="form-control" placeholder="2자리 이상">
+                                    </div>
+
+                                    <div class="nationality-select col-10 mt-4 mb-1">
+                                        <div class="row justify-content-center">
+
+                                            <div class="col-12">
+                                                <h5 class="mt-1 mb-3">나의 국적</h5>
+                                            </div>
+                                            
+                                            <div class="col-3 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input check-flag" type="radio" name="nationality" id="nation1" style="background-image: url(images/china.png);" required>
+                                                    <label class="form-check-label-1" for="nation1">
+                                                        중국
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-3 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input check-flag" type="radio" name="nationality" id="nation2" style="background-image: url(images/us.png);" required>
+                                                    <label class="form-check-label-1" for="nation2">
+                                                        미국
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-3 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input check-flag" type="radio" name="nationality" id="nation3" style="background-image: url(images/vietnam.png);" required>
+                                                    <label class="form-check-label-1" for="nation3">
+                                                        베트남
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-3 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input check-flag" type="radio" name="nationality" id="nation4" style="background-image: url(images/japan.png);" required>
+                                                    <label class="form-check-label-1" for="nation4">
+                                                        일본
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="target-grade-select col-10 mt-4">
+                                        <div class="row justify-content-center">
+
+                                            <div class="col-12">
+                                                <h5 class="mt-1 mb-3">나의 TOPIK 목표 등급</h5>
+                                            </div>
+        
+                                            <div class="col-4 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input" type="radio" name="target" id="grade1" required>
+                                                    <label class="form-check-label" for="grade1">
+                                                        1급
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-4 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input" type="radio" name="target" id="grade2" required>
+                                                    <label class="form-check-label" for="grade2">
+                                                        2급
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-4 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input" type="radio" name="target" id="grade3" required>
+                                                    <label class="form-check-label" for="grade3">
+                                                        3급
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="w-100"></div>
+        
+                                            <div class="col-4 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input" type="radio" name="target" id="grade4" required>
+                                                    <label class="form-check-label" for="grade4">
+                                                        4급
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-4 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input" type="radio" name="target" id="grade5" required>
+                                                    <label class="form-check-label" for="grade5">
+                                                        5급
+                                                    </label>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-4 form-check-group">
+                                                <div class="form-check form-check-radio">
+                                                    <input class="form-check-input" type="radio" name="target" id="grade6" required>
+                                                    <label class="form-check-label" for="grade6">
+                                                        6급
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="invalid-feedback">
+                                                Please provide a valid city.
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col-4 mt-5">
+                                        <button type="button" class="form-control mt-4" onclick="joinform_check();">회원가입</button>
+                                    </div> -->
+
+                                    <!-- Button trigger modal -->
+                                    <div class="col-4 mt-5 text-center">
+                                        <button type="button" class="modal-control btn" onclick="signform_check()">
+                                            회원가입
+                                        </button>
+                                    </div>
+
+                                    <div class="col-12 mt-0">
+                                        <p class="mt-3 mb-3">이미 계정이 있어요.&ensp;>>>&ensp;<a href="loginout.html">로그인</a></p>
+                                    </div>
+
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="signupinform" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h1 class="modal-title fs-5" id="exampleModalLabel">회원가입 안내사항</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    환영합니다!<br>
+                                                    회원가입이 완료되기까지 최대 10여 분의 시간이 소요될 수 있습니다. 때때로 관리자에 인해 가입이 거부될 수 있습니다.
+                                                </div>
+                                                <div class="modal-footer justify-content-center">
+                                                    <button type="submit" onclick="myFunction1()" class="btn confirm-signup" data-bs-dismiss="modal">확인</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-9 col-md-7 col-12">
+                            <p class="copyright-text mt-1 mb-1">광주광역시 동구 제봉로 92, 인공지능사관학교
+                        	<br>Copyright © 2022 KoPanda. All Rights Reserved.</p>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-5 col-12 mt-2 mb-2">
+                            <img src="images/kopanda_logo_white.png" class="foot_logo img-fluid" alt="">
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-caret-up-fill"></i></a>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/module/pdf/jquery.min.js"></script>
+        <script src="js/module/pdf/bootstrap.min.js"></script>
+        <script src="js/module/pdf/jquery.sticky.js"></script>
+        <script src="js/module/pdf/counter.js"></script>
+        <script src="js/module/pdf/custom.js"></script>
+
+        <!-- 항목별 필수 조건 확인 -->
+        <script src="js/signup_check.js"></script>
+        <script>
+            function myFunction1() {
+                console.log("gogo")
+                window.location.href="http://kopanda.iptime.org";  
+            }
+          </script>
+    </body>
+</html>

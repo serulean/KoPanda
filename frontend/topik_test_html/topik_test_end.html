@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KoPanda - TOPIK 말하기</title>
+    <link rel="shortcut icon" href="images/fevicon.ico" />
+    
+    <!-- CSS FILES -->   
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="../css/kopanda-site.css" />
+
+    <style>
+        .test, .answer_wait, .mic_ans {
+            display: none;
+        }
+        #topik-notice {
+            background-image: url(../images/topik_test_intro.png);
+        }
+        #topik-test {
+            background-image: url(../images/topik_test.png);
+        }
+    </style>
+</head>
+
+<body id="topik-test">
+
+    <main>
+
+        <section class="test-notice-section text-center">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 my-auto mt-5 mb-5">
+                        <h1 class="test-notice-title">수고하셨습니다.</h1>
+                    </div>
+
+                    <div class="test-notice-body-sub col-12 my-auto mt-3 mb-5">
+                        <h4 class="test-notice-subline mx-auto">
+                            5초 후, '나의 성적표' 화면으로 이동합니다.
+                        </h4>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <meta http-equiv="refresh" content="5; url='../topik_gradecard_list.html">
+
+    </main>
+</body>
+
+</html>

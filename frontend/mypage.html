@@ -1,0 +1,535 @@
+<!--
+TemplateMo 581 Kind Heart Charity
+https://templatemo.com/tm-581-kind-heart-charity
+-->
+
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>KoPanda - 나의 TOPIK</title>
+        <link rel="shortcut icon" href="images/fevicon.ico" />
+
+        <!-- CSS FILES -->   
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-icons.css" />
+        <link rel="stylesheet" type="text/css" href="css/kopanda-site.css" />
+    </head>
+    
+    <body id="section_1">
+        
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-12 d-flex flex-wrap justify-content-end">
+                        <p class="d-flex me-4 mb-0">
+                            <a href="loginout.html">로그인</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow">
+            <div class="container">
+                <a class="navbar-brand" href="/main_page.html">
+                    <img src="images/logo_word.png" class="logo img-fluid" alt="KoPanda">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="one-menu" href="/topik_introduce.html">TOPIK 말하기란</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="one-menu" href="/kopanda_price.html">KoPanda 요금제</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="one-menu" href="/topik_test_list.html">응시하기</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="one-menu-select" href="/mypage.html" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">나의 TOPIK</a>
+                            
+                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+                                <li><a class="dropdown-item-select" href="/mypage.html">나의 TOPIK</a></li>
+                                <li><a class="dropdown-item" href="/topik_gradecard_list.html">나의 성적표</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <main>
+
+            <section class="personal-section personal-section-padding mt-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="personal col-lg-2 col-5 my-auto">
+                            <img src="images/KoPanda.png" class="personal-profile-image img-thumbnail" alt="">
+                        </div>
+                        <div class="personal col-lg-4 col-7 mx-auto my-auto">
+                            <h4><span class="user_nickname">판다스</span> 님 안녕하세요!</h4>
+                        </div>
+                        <div class="personal col-lg-2 col-3 my-auto mt-lg-0 mt-4">
+                            <h5>나의 목표</h5>
+                            <h6 class="grade_goal">1급</h6>
+                        </div>
+                        <div class="personal col-lg-2 col-3 my-auto mt-lg-0 mt-4">
+                            <h5>총 학습시간</h5>
+                            <h6 class="learning_time">00:12:01</h6>
+                        </div>
+                        <div class="personal col-lg-2 col-3 my-auto mt-lg-0 mt-4">
+                            <h5>푼 문제수</h5>
+                            <h6 class="solved_question">2</h6>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="personal-section personal-section-padding mt-4">
+                <div class="container">
+                    <div class="row">
+                        
+                        <div class="col-10 mx-auto">
+                            <div class="row">
+
+                                <div class="col-lg-7 col-12">
+                                    <div class="personal-block-info">
+                                        <div class="personal-block-title">
+                                            <h4 class="personal-block-title-link mb-4">나의 학습 분석</h4>
+                                        </div>
+                                    </div>
+                                    <div class="personal-block">
+                                        <div class="personal-block-top text-center">
+                                            <canvas id="LineChart" width="600" height="360" class="personal-image-analysis text-center mb-3"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="col-lg-5 col-12 mx-auto mt-lg-0 mt-5">
+                                    <div class="personal-block-info">
+                                        <div class="personal-block-title">
+                                            <h4 class="personal-block-title-link mb-4">최근 나의 성적</h4>
+                                        </div>
+                                    </div>
+                                    <div class="personal-block">
+                                        <div class="personal-block-top text-center">
+                                            <canvas id="RadarChart" width="360" height="360" class="personal-image-radar text-center mb-3"></canvas>
+                                        </div>
+
+                                        <div class="personal-category-block">
+                                            <a href="/topik_gradecard_list.html" class="personal-block-link">
+                                                >> 지난 성적표
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="personal-section personal-section-padding mt-5 mb-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+
+                        <div class="col-10 my-auto">
+                            <div class="row">
+
+                                <div class="col-4 mx-auto my-auto text-center">
+                                    <div class="personal-block-info">
+                                        <div class="personal-block-title">
+                                            <h4 class="personal-test">말하기 모의고사</h4>
+                                            <div class="personal-sub-line">
+                                                시험 대비를 하고 싶어요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="/topik_test_list.html" class="personal-btn btn smoothscroll mt-3 mb-4">
+                                        응시하기
+                                    </a>
+                                </div>
+        
+                                <div class="col-4 mx-auto my-auto text-center">
+                                    <div class="personal-block-info">
+                                        <div class="personal-block-title">
+                                            <h4 class="personal-test">TOPIK 예상 문제</h4>
+                                            <div class="personal-sub-line">
+                                                주제별로 문제들을 공부하고 싶어요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 mb-4">
+                                        서비스 준비 중입니다.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="personal-section personal-section-padding mb-6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-10 mt-4 mt-lg-0 mx-auto">
+                            <div class="personal-block-info">
+                                <div class="personal-block-title">
+                                    <h4 class="personal-block-title-link mb-4">오늘의 틈새 문제<span>정답을 맞추면 꽃가루가 내려와요!</span></h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-10 mx-auto">
+                            <form class="personal-quiz-form" action="#" method="get" role="form">
+                                <div class="row justify-content-center">
+
+                                    <div class="col-lg-6 col-12 mx-auto my-auto">
+                                        <img src="images/심슨2.jpg" class="personal-image-quiz" alt="">
+                                        
+                                    </div>
+
+                                    <div class="personal-popquiz col-lg-6 col-12 ">
+                                        <div class="row justify-content-center">
+                                            <p class="quiz-question mt-lg-0 mt-3">우리 가족은 참 _____.</p>
+                                            <button type="button" class="btn quiz-wrong">1. 바빠</button>
+                                            <button type="button" class="btn quiz-correct">2. 단란해</button>
+                                            <button type="button" class="btn quiz-wrong">3. 신난다</button>
+                                            <button type="button" class="btn quiz-wrong">4. 배불러</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>      
+
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="testimonial-section personal-section-padding section-bg mb-6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-8 col-12 mx-auto">
+                            <h3 class="mt-2 mb-lg-4 mb-5">오늘의 문장</h2>
+                            <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="carousel-caption">
+                                            <h4 class="carousel-title">
+                                                코발트블루 물결 눈부신 바다 달빛 가득 묻은 작은 섬
+                                            </h4>
+                                            <small class="carousel-name"><span class="carousel-name-title">상상 더하기</span>, 라붐</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="contact-section personal-section-padding" id="section_6">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                            <div class="contact-info-wrap">
+                                <h2>질문이 있으신가요?</h2>
+
+                                <div class="contact-info">
+                                    <h5 class="mt-5 mb-5">KoPanda의 TOPIK 말하기 모의고사나 성적에 대해 궁금한 것이 있다면 언제든지 알려주세요.</h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-12 mx-auto">
+                            <form class="custom-form contact-form" action="#" method="post" role="form">
+                                <h2 class="mb-5">문의하기</h2>
+                                
+                                <div class="row">
+
+                                    <div class="col-12">
+                                        <input type="text" name="first-name" id="first-name" class="form-control" placeholder="이메일 주소" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-6 mt-2 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="DonationPayment" id="flexRadioDefault9">
+                                            <label class="form-check-label" for="flexRadioDefault9">
+                                                성적 문의
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-6 mt-2 mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="DonationPayment" id="flexRadioDefault10">
+                                            <label class="form-check-label" for="flexRadioDefault10">
+                                                오류 문의
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <textarea name="message" rows="5" class="form-control mb-3" id="message" placeholder="문의 내용을 적어주세요."></textarea>
+                                <!-- <button type="submit" class="form-control mt-5">문의하기</button> -->
+                                <button type="button" class="btn btn-primary form-control waiting" id="liveAlertBtn">준비중입니다...</button>
+                                <div id="liveAlertPlaceholder"></div>
+
+                                <p class="mt-3 mb-0">* info@kopanda.com로 이메일을 보내주셔도 됩니다.<br>* 답변을 드리기까지 수 일의 시간이 소요될 수 있습니다.</p>
+
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-9 col-md-7 col-12">
+                            <p class="copyright-text mt-1 mb-1">광주광역시 동구 제봉로 92, 인공지능사관학교
+                        	<br>Copyright © 2022 KoPanda. All Rights Reserved.</p>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-5 col-12 mt-2 mb-2">
+                            <img src="images/kopanda_logo_white.png" class="foot_logo img-fluid" alt="">
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary back-to-top"><i class="bi bi-caret-up-fill"></i></a>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/module/pdf/jquery.min.js"></script>
+        <script src="js/module/pdf/bootstrap.min.js"></script>
+        <script src="js/module/pdf/jquery.sticky.js"></script>
+        <script src="js/module/pdf/click-scroll.js"></script>
+        <script src="js/module/pdf/counter.js"></script>
+        <script src="js/module/pdf/custom.js"></script>
+ 
+        <!-- 버튼 클릭 시 배경색 바뀌는 효과 -->
+        <script src="js/click-colorchange.js"></script>
+        
+        <!-- 정답 클릭 시 꽃가루(confetti) 날리는 효과 -->
+        <script src="js/confetti_v2.js"></script>
+        <script src="js/click-confetti.js"></script>
+        
+        <div class="buttonContainer" style="display: none;">
+            <button class="canvasBtn" id="stopButton"></button>
+            <button class="canvasBtn" id="startButton"></button>	
+        </div>
+
+        <canvas id="canvas"></canvas>
+
+        <!-- 경고 메세지 -->
+        <script src="js/live_aleart.js"></script>
+        
+        <!-- 레이더 차트 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+        <script>
+            var marksCanvas = document.getElementById("RadarChart");
+
+            Chart.defaults.global.defaultFontFamily = "Noto Sans KR";
+            Chart.defaults.global.defaultFontSize = 12;
+
+            const result_list = ["{{ topic_grade }}", "{{ accuracy_grade }}", "{{ speed_grade }}", "{{ vocabulary_grade }}", "{{ grammar_grade }}"]
+            var marksData = {
+            labels: ["주제 적합성", "발음", "속도", "어휘", "문법"],    // 점수 넣는 순서
+            datasets: [{
+                backgroundColor: "#597081",
+                borderColor: "#597081",
+                fill: true,
+                backgroundColor: 'rgba(89, 112, 129, 0.4)',
+                radius: 3,
+                pointRadius: 4,
+                pointBorderWidth: 1,
+                pointBackgroundColor: "#597081",
+                pointBorderColor: "#597081",
+                pointHoverRadius: 7,
+                data: [50, 84.04, 33, 28, 60]      // 점수 넣을 곳
+            }]
+            };
+
+            var chartOptions = {
+            scale: {
+                gridLines: {
+                    color: 'rgba(221, 221, 221, 1)',
+                    lineWidth: 1
+                },
+                angleLines: {
+                    display: true,
+                    color: 'rgba(221, 221, 221, 1)',
+                },
+                animate : 'true',
+                ticks: {
+                    beginAtZero: true,
+                    min: 0,
+                    max: 100,
+                    stepSize: 25,
+                    textStrokeWidth: 1,
+                    color: 'rgba(221, 221, 221, 1)',
+                    padding: 10,
+                    fontSize: 10
+                },
+                pointLabels: {
+                    fontSize: 14,
+                    fontColor: "rgba(89, 112, 129)",
+                    weight: 'bolder'
+                }
+            },
+            legend: {
+                display: false
+            },
+            responsive: false
+            };
+
+            var radar_Chart = new Chart(marksCanvas, {
+                type: 'radar',
+                data: marksData,
+                options: chartOptions
+            });
+        </script>
+
+
+
+        <!-- 꺽은선 그래프 -->
+        <script>
+            var lineCanvas = document.getElementById("LineChart");
+
+            Chart.defaults.global.defaultFontFamily = "Noto Sans KR";
+            Chart.defaults.global.defaultFontSize = 12;
+
+            var linesData = {
+                labels: ["주제 적합성", "발음", "속도", "어휘", "문법"],    // 점수 넣는 순서
+                datasets: [{
+                    label: '나의 최근 성적',
+                    borderColor: "#4d9957",
+                    fill: false,
+                    lineTension: 0,
+                    pointBackgroundColor: "#4d9957",
+                    pointRadius: 4,
+                    pointHoverRadius: 7,
+                    data: [50, 84.04, 33, 28, 60]      // 점수 넣을 곳
+                }, {
+                    label: '나의 평균 성적',
+                    borderColor: "#597081",
+                    fill: false,
+                    lineTension: 0,
+                    pointBackgroundColor: "#597081",
+                    pointRadius: 4,
+                    pointHoverRadius: 7,
+                    data: [74, 45, 30, 80, 65]      // 점수 넣을 곳
+                }, {
+                    label: '전체 평균 성적',
+                    borderColor: "#adadad",
+                    fill: false,
+                    lineTension: 0,
+                    pointBackgroundColor: "#adadad",
+                    pointRadius: 4,
+                    pointHoverRadius: 7,
+                    data: [85, 70, 72, 76, 75]      // 점수 넣을 곳
+                }]
+            };
+
+            var lchartOptions = {
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        ticks: {
+                            fontSize: 14,
+                            fontColor: "rgba(89, 112, 129)"
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'x축'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            suggestedMin: 0,
+                            max: 100,
+                        },
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'y축'
+                        }
+                    }],
+                },
+                responsive: false,
+                title: {
+                    display: false
+                },
+                tooltips: {
+                    mode: 'index',
+                    inersect: true
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                }};
+
+            var line_Chart = new Chart(lineCanvas, {
+                type: 'line',
+                data: linesData,
+                options: lchartOptions,
+                plugins: [{
+                    beforeInit: function(chart, options) {
+                        chart.legend.afterFit = function() {
+                            this.height = this.height + 16;
+                        };
+                    }
+                }]
+            });
+        </script>
+
+
+    </body>
+</html>

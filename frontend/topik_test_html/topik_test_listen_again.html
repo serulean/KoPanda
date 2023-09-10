@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>KoPanda 말하기 모의고사 - 내 답변 듣기</title>
+    <link rel="shortcut icon" href="images/fevicon.ico" />
+    
+    <!-- CSS FILES -->   
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="../css/kopanda-site.css" />
+
+    <style>
+        .test, .answer_wait, .mic_ans {
+            display: none;
+        }
+        #topik-notice {
+            background-image: url(../images/topik_test_intro.png);
+        }
+        #topik-test {
+            background-image: url(../images/topik_test.png);
+        }
+    </style>
+</head>
+
+<body id="topik-test">
+
+    <main>
+
+        <section class="test-notice-section text-center">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 my-auto mt-6 mb-3">
+                        <h1 class="test-myanswer-title"><span class="test-user_nickname">KoPanda</span> 님의 멋진 답변을 다시 들어보세요!</h1>
+                    </div>
+
+                    <div class="test-notice-body col-12 my-auto mt-2 mb-4">
+                        <h3 class="test-myanswer-mainline mx-auto">
+                            한글로 옮겨진 나의 답변을 확인해보세요.
+                        </h3>
+                    </div>
+
+                    <div class="wave-form mx-auto col-5 mt-4 mb-4">
+                        <div class="mb-4" id="waveform"></div>
+                        <button class="btn-play mt-1 mb-1" onclick="wavesurfer.play()"><i class="bi bi-play-fill"></i></button>
+                        <button class="btn-pause mt-1 mb-1" onclick="wavesurfer.pause()"><i class="bi bi-pause-fill"></i></button>
+                        <button class="btn-stop mt-1 mb-1" onclick="wavesurfer.stop()"><i class="bi bi-stop-fill"></i></button>
+                    </div>
+
+                    <div style="text-align:center">
+                        <textarea readonly class="test-show-answer mt-3 mb-3" name="myanswer" id="myanswer" cols="150">제가 학교에서 졸업증명서를 빼려고 했는데 외국인이란 이유로 행정적인 일이 너무 복잡해서 시간을 시간이 너무 오래 걸린 적이 있어요 그래서 너무 어려웠어요</textarea>
+                    </div>
+
+                    <a href = "topik_test_end.html">
+                        <button class="test-notice-start-btn btn mt-4 mb-3 mx-auto">
+                            <span>시험 종료</span>
+                        </button>
+                    </a>  
+                </div>
+            </div>
+            </section>
+
+    </main>
+    
+    <!-- Wave Surfer -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <script>
+        var wavesurfer = WaveSurfer.create({
+            height: 50,
+            barHeight: 2,
+            barWidth: 2,
+            container: '#waveform',
+            waveColor: '#d7d7d7',
+            progressColor: '#4D9957'
+        });
+        wavesurfer.load('/storages/answer.wav');
+        
+    </script>
+</body>
+
+</html>

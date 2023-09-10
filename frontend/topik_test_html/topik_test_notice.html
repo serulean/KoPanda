@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>KoPanda 말하기 모의고사</title>
+    <link rel="shortcut icon" href="images/fevicon.ico" />
+        
+    <!-- CSS FILES -->   
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-icons.css" />
+    <link rel="stylesheet" type="text/css" href="../css/kopanda-site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        .test, .answer_wait, .mic_ans {
+            display: none;
+        }
+        #topik-notice {
+            background-image: url(../images/topik_test_intro.png);
+        }
+        #topik-test {
+            background-image: url(../images/topik_test.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" id="topik-notice">
+        <!-- 마이크 권한 허용 요청 -->
+        <script src="../js/topik_test/mic_permission.js"></script>
+        <section class="test-notice-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-auto mt-5 mb-5">
+                        <h1 class="test-notice-title">시험 유의사항</h1>
+                    </div>
+                    <div class="test-notice-body col-12 my-auto mt-4 mb-3">
+                        <h2 class="test-notice-mainline mx-auto">
+                            이 시험은 'Topik 말하기 시험'을 연습하기 위한 모의 시험입니다.<br>
+                            실제 시험과 다소 차이가 있을 수 있습니다.
+                        </h2>
+                    </div>
+                    <div class="test-notice-body-sub col-12 my-auto mt-3 mb-5">
+                        <h4 class="test-notice-subline mx-auto">
+                            응시자는 시험 시작 전 '마이크 권한'을 반드시 '허용'으로 변경해야 합니다.<br>
+                            전체화면(F11) 환경에서 더욱 실감나게 시험을 응시하실 수 있습니다.<br>
+                            [시작하기] 버튼을 누르면 시험이 시작됩니다.
+                        </h4>
+                        <button id="start" class="test-notice-start-btn btn mt-5">시작하기</button>
+                    </div>
+                    <div class="col-2 my-auto">
+                        <a href="../topik_test_list.html">
+                            <button class="test-notice-list-btn btn">
+                                <span>시험 목록으로</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="test" id="topik-test">
+        <a href="topik_test_quit.html">
+            <button class="test-stop-btn btn">
+                <span>시험 중단</span>
+            </button>
+        </a>
+        <section class="test-question-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="test-question col-12 my-auto mt-6 mb-6">
+                        <audio src="../audio/first_introduce.mp3" id="myAudio" onended="nextPlay();"></audio>
+                        <audio src="../audio/question.wav" id="questionAudio" onended="nextAnswer();"></audio>
+                        <h3 class="test-question-mainline mx-auto my-auto">
+                            <span>1번. 질문을 듣고 대답하십시오.<br>
+                                20초 동안 준비하십시오. '삐' 소리가 끝나면 30초 동안 말하십시오.</span>
+                        </h3>
+                        <div>
+                            <textarea readonly class="test-show-question mt-4" name="question" id="question" cols="150">
+                            </textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="answer_wait" id="topik-test">
+        <a href="topik_test_quit.html">
+            <button class="test-stop-btn  btn">
+                <span>시험 중단</span>
+            </button>
+        </a>
+        <section class="test-question-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="test-question col-12 my-auto mt-6 mb-6">
+                        <audio src="../audio/beep20s.mp3" id="myAudio2" onended="nextRec();"></audio>
+                        <h3 class="test-answer-mainline mx-auto my-auto">
+                            20초 동안 답변을 준비하십시오.
+                        </h3>
+                        <div class="progress-ready mt-5" id="progress">
+                            <div id="bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="mic_ans" id="topik-test">
+        <section class="test-question-section text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="test-question col-12 my-auto mt-3 mb-4">
+                        <audio src="../audio/beep30s.mp3" id="myAudio3" onended="stopRecording();"></audio>
+                        <h3 class="test-answer-mainline mx-auto my-auto">
+                            음성 녹음이 시작되었습니다.<br>
+                            30초 동안 말하십시오.
+                        </h3>
+                        <div class="progress-answer mt-5" id="progress">
+                            <div id="bar2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+<script>
+    $('#start').click(function () {
+        $('.main').hide();
+        $('.test').show();
+        document.getElementById('myAudio').play();
+    });
+
+    function nextPlay() {
+        document.getElementById('question').textContent = "당신이 한국에 온 후에 가장 힘들었던 것은 무엇인가요? 그 이유는 무엇이었나요?";
+        var media2 = document.getElementById('questionAudio');
+        media2.currentTime = 0;
+        media2.play();
+    }
+
+    function nextAnswer() {
+        $('.test').hide();
+        $('.answer_wait').show();
+        document.getElementById('myAudio2').play();
+        const progressBar = document.getElementById("bar");
+        let barWidth = 0;
+        const animate = () => {
+            barWidth++;
+            progressBar.style.width = `${barWidth}%`;
+        };
+        setTimeout(() => {
+            let intervalID = setInterval(() => {
+                if (barWidth === 100) {
+                    clearInterval(intervalID);
+                } else {
+                    animate();
+                }
+            }, 200);
+        }, 1);
+    }
+
+    function nextRec() {
+        setTimeout(() => {
+            $('.answer_wait').hide();
+            $('.mic_ans').show();
+            document.getElementById('myAudio3').play();
+            const progressBar2 = document.getElementById("bar2");
+            let barWidth2 = 0;
+            const animate2 = () => {
+                barWidth2++;
+                progressBar2.style.width = `${barWidth2}%`;
+            };
+            let intervalID2 = setInterval(() => {
+                if (barWidth2 === 100) {
+                    clearInterval(intervalID2);
+                } else {
+                    animate2();
+                }
+            }, 300);
+            startRecording();
+        }, 1);
+    }
+    </script>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="https://unpkg.com/mic-recorder-to-mp3@2.2.1/dist/index.min.js"></script>
+    <script>
+        const recorder = new MicRecorder({
+            bitRate: 256
+        });
+
+        function startRecording() {
+            recorder.start().then(() => {
+                setTimeout(console.log(), 15000);
+            }).catch((e) => {
+                console.error(e);
+                setTimeout(() => {
+                        window.location.replace("topik_test_sendaudio.html");
+                }, 32000);
+            }, 300);
+        };
+
+        function stopRecording() {
+            recorder.stop().getMp3().then(([buffer, blob]) => {
+                const file = new File(buffer, "{{url_for('static', filename = '/answer.mp3')}}", {
+                    type: blob.type,
+                    lastModified: Date.now()
+                });
+                var xhr = new XMLHttpRequest();
+                xhr.onload = function (e) {
+                    if (this.readyState === 4) {
+                        console.log("Server returned: ", e.target.responseText);
+                    }
+                };
+                var fd = new FormData();
+                var filename = new Date().toISOString();
+                fd.append("audio_data", blob, filename);
+                fd.append("uuid", "{{uuid}}");
+                xhr.open("POST", "/receive", true);
+                xhr.send(fd);
+                xhr.onreadystatechange = function (event) {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        const responseData = xhr.responseText;
+                    }
+                    setTimeout(window.location.replace("topik_test_sendaudio.html"), 1000);
+                }
+            }).catch((e) => {
+                console.error(e);
+                setTimeout(window.location.replace("topik_test_sendaudio.html"), 1000);
+            });
+        }
+    </script>
+</body>
+</html>
