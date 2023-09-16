@@ -23,7 +23,12 @@ https://serulean.github.io/KoPanda/
 
 - 회원가입 및 로그인 없이 이용 가능합니다.
 
-- 소개 편의를 위해 미리 녹음된 음성 및 예시 문장과 결과를 사용하였습니다. (프로젝트 당시에는 Flask를 이용해 백엔드를 구현했습니다.)
+- 소개 편의를 위해 미리 녹음된 음성 및 예시 문장과 결과를 사용하였습니다(프로젝트 당시에는 Flask를 이용해 백엔드를 구현했습니다.)
+
+<p align = "center">
+    <img src="./assets/KoPanda_preview.gif" width="500">
+</p>
+<p align = "center">(성적표 예시)</p>
 
 <br>
 
@@ -34,6 +39,7 @@ https://serulean.github.io/KoPanda/
 <a href='./assets/KoPanda_발표자료.pdf' style="color: green; font-weight: bold">KoPanda 발표 자료</a>
 
 <br>
+
 
 # KoPanda 구성
 
